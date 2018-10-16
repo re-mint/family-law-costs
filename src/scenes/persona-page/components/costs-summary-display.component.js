@@ -15,6 +15,8 @@ import {
 } from "../persona-page.styles";
 import { colours, fontSizes } from "src/styles";
 import { capitalize } from "src/utils";
+import { InfoButtonModal } from "./info-button-modal.component";
+
 
 const impactToImage = {
   low: "ThermoYellow",
@@ -26,7 +28,7 @@ export const CostsSummaryDisplay = ({
   persona,
   impactOnStability,
   costsOfTheCase,
-  otherFinancialImpacts
+  otherFinancialImpacts,
 }) => (
   <div>
     <SectionSubheader textColour={colours.white}>
@@ -68,7 +70,9 @@ export const CostsSummaryDisplay = ({
         </CenteredContent>
       </TallOutlinedDisplayCard>
       <TallOutlinedDisplayCard borderWidth="3px">
-        <Label textColour={colours.white}>Impact on Stability</Label>
+        <Label textColour={colours.white}>Impact on Stability
+          <InfoButtonModal infoSection="impact" />
+        </Label>
         <CenteredContent>
           <ThermometerImage imageName={impactToImage[impactOnStability]} />
         </CenteredContent>
@@ -92,5 +96,6 @@ CostsSummaryDisplay.propTypes = {
   incomeDisplay: PropTypes.string,
   costsOfTheCase: PropTypes.string,
   impactOnStability: PropTypes.string,
-  otherFinancialImpacts: PropTypes.string
+  otherFinancialImpacts: PropTypes.string,
+  infoSection: PropTypes.string
 };

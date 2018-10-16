@@ -344,6 +344,19 @@ export const CloseModalButton = styled(ButtonReset)`
     color: ${colours.white};
   }
 `;
+
+export const OpenInfoModalButton = styled(ButtonReset)`
+  font-size: ${fontSizes.subtitle};
+  color: ${colours.periwinkleBlue};
+  text-decoration: underline;
+  &:hover {
+    color: ${colours.violet};
+  }
+  @media only screen and (max-device-width: 480px) {
+    padding-bottom: ${spacing.four};
+  }
+`;
+
 export const OpenModalButton = styled(ButtonReset)`
   font-size: ${fontSizes.subtitle};
   color: ${colours.periwinkleBlue};

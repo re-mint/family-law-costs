@@ -9,6 +9,8 @@ import {
   CostTextContentWrapper
 } from "../persona-page.styles";
 
+import { InfoButtonModal } from "./info-button-modal.component";
+
 export const TransportationCosts = ({ transportationFees }) => (
   <CostSectionWrapper>
     <CostTextContentWrapper>
